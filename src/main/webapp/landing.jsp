@@ -222,7 +222,7 @@
             <div class="categories">Categories</div>
             <ul>
                 <li class="<%= (categoryId.equals("0")) ? "active" : "" %>">
-                    <a href="Order.jsp?categoryId=0">
+                    <a href="landing.jsp?categoryId=0">
                         All
                     </a>
                 </li>
@@ -230,7 +230,7 @@
                     for (Category category : DB.categorys) {
                 %>
                 <li class="<%= Integer.parseInt(categoryId) == (category.getId()) ? "active" : "" %>">
-                    <a href="Order.jsp?categoryId=<%=category.getId()%>">
+                    <a href="landing.jsp?categoryId=<%=category.getId()%>">
                         <%=category.getName()%>
                     </a>
                 </li>
@@ -289,7 +289,7 @@
                 <%
                     }
                 %>
-                <a class="btn btn-primary" href="Basket.jsp">
+                <a class="btn btn-primary" href="basket.jsp">
                     Basket
                 </a>
             </div>
@@ -303,7 +303,7 @@
                     boolean isInCart = cart.containsKey(product);
                     System.out.println(product);
             %>
-            <form action="${pageContext.request.contextPath}/AddToCartServlet" method="post" class="order_card col-8">
+            <form action="${pageContext.request.contextPath}/AddToBasketServlet" method="post" class="order_card col-8">
                 <input type="hidden" name="productId" value="<%= product.getId() %>">
                 <input type="hidden" name="categoryId" value="<%= categoryId %>">
                 <input type="hidden" name="action" value="<%= isInCart ? "remove" : "add" %>">
