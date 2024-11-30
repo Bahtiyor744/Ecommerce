@@ -1,8 +1,6 @@
 package com.example.ecommerce.db;
 
-import com.example.ecommerce.entity.Category;
-import com.example.ecommerce.entity.Product;
-import com.example.ecommerce.entity.User;
+import com.example.ecommerce.entity.*;
 import com.example.ecommerce.enums.UserRole;
 
 import java.util.ArrayList;
@@ -20,4 +18,6 @@ public interface DB {
        new Category("Fruits"),
        new Category("Drinks")
     ));
+    List<Order> orders = new ArrayList<>();
+    List<OrderItem> orderItem = new ArrayList<>();
 }

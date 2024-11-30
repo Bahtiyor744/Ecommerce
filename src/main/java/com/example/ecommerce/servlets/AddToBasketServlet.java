@@ -14,9 +14,9 @@ import java.io.IOException;
 import java.util.Objects;
 
 @WebServlet("/AddToBasketServlet")
-public class AddToCartServlet extends HttpServlet {
+public class AddToBasketServlet extends HttpServlet {
     @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         String productId = req.getParameter("productId");
         String categoryId = req.getParameter("categoryId");
         String action = req.getParameter("action");

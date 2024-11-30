@@ -83,7 +83,7 @@
         </tfoot>
     </table>
     <div class="mt-3 text-center">
-        <form action="/AddOrder" method="get">
+        <form action="/AddOrderServlet" method="get">
             <button class="btn btn-lg btn-primary" style="outline: none; background: steelblue; color: #fff;">
                 Go
             </button>
