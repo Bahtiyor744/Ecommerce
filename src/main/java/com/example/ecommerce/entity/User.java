@@ -16,4 +16,12 @@ public class User {
     private UserRole userRole = UserRole.USER;
     private String email;
     private static int idGen = 1;
+
+    public User(String firstName, String lastName, String password, UserRole userRole, String email) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.password = password;
+        this.userRole = userRole;
+        this.email = email;
+    }
 }

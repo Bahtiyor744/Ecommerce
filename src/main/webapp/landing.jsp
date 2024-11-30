@@ -269,14 +269,14 @@
                     boolean enter = user != null;
                     if (!enter) {
                 %>
-                <a href="Login.jsp" class="btn btn-primary">
+                <a href="login.jsp" class="btn btn-primary">
                     Login
                 </a>
                 <%
                 } else {
                     if (user.getUserRole().equals(UserRole.ADMIN)) {
                 %>
-                <a class="btn btn-outline-warning" href="Admin.jsp" style="font-weight: bold;">
+                <a class="btn btn-outline-warning" href="admin.jsp" style="font-weight: bold;">
                     Admin
                 </a>
                 <% }%>
