@@ -280,10 +280,10 @@
                     Admin
                 </a>
                 <% }%>
-                <a class="btn btn-outline-success" href="MyOrders.jsp" style="font-weight: bold;">
+                <a class="btn btn-outline-success" href="myOrders.jsp" style="font-weight: bold;">
                     My Orders
                 </a>
-                <a href="${pageContext.request.contextPath}/ClearMap" class="btn btn-outline-primary">
+                <a href="${pageContext.request.contextPath}/LogOutServlet" class="btn btn-outline-primary">
                     Log out
                 </a>
                 <%
