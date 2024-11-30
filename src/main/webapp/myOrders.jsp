@@ -14,7 +14,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Products Table</title>
+    <title>My Orders Table</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <style>
@@ -50,7 +50,7 @@
                 int count = 0;
                 if (order.getUserId() == userId) {
                     for (OrderItem orderItem : DB.orderItem) {
-                        if (order.getId() == orderItem.getOrderID() {
+                        if (order.getId() == orderItem.getOrderID()){
                             count += 1;
                         }
                     }

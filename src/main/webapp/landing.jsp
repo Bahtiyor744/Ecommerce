@@ -276,7 +276,7 @@
                 } else {
                     if (user.getUserRole().equals(UserRole.ADMIN)) {
                 %>
-                <a class="btn btn-outline-warning" href="admin.jsp" style="font-weight: bold;">
+                <a class="btn btn-outline-warning" href="${pageContext.request.contextPath}/admin.jsp" style="font-weight: bold;">
                     Admin
                 </a>
                 <% }%>
@@ -301,7 +301,6 @@
                         Product product : filteredProducts
                 ) {
                     boolean isInCart = cart.containsKey(product);
-                    System.out.println(product);
             %>
             <form action="${pageContext.request.contextPath}/AddToBasketServlet" method="post" class="order_card col-8">
                 <input type="hidden" name="productId" value="<%= product.getId() %>">
