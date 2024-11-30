@@ -26,7 +26,7 @@
                 <input type="password" class="form-control" placeholder="Password" name="password" required>
             </div>
             <div class="d-flex justify-content-between align-items-center">
-                <a href="/Register.jsp">
+                <a href="${pageContext.request.contextPath}/register.jsp">
                     Register
                 </a>
                 <button type="submit" class="btn btn-primary">
