@@ -1,4 +1,3 @@
-
 <%@ page import="com.example.ecommerce.entity.User" %>
 <%@ page import="com.example.ecommerce.entity.Category" %>
 <%@ page import="com.example.ecommerce.db.DB" %>
@@ -121,7 +120,7 @@
             </div>
             <div class="user-name">
                 <p style="margin: 0; font-weight: bold;">
-                    <%= session.getAttribute("user") != null ? ((User)session.getAttribute("user")).getUserRole() : "Guest" %>
+                    <%= session.getAttribute("user") != null ? ((User) session.getAttribute("user")).getUserRole() : "Guest" %>
                 </p>
             </div>
         </div>
@@ -135,9 +134,11 @@
         <!-- Login button -->
 
         <div class="col-12 text p-3" style="position: relative;">
-            <a href="landing.jsp" class="btn btn-outline-primary" style="position: absolute; top: 0; right: 90px; margin: 10px;">
+            <a href="landing.jsp" class="btn btn-outline-primary"
+               style="position: absolute; top: 0; right: 90px; margin: 10px;">
                 Online shop</a>
-            <a href="login.jsp" class="btn btn-outline-primary" style="position: absolute; top: 0; right: 0; margin: 10px;">
+            <a href="login.jsp" class="btn btn-outline-primary"
+               style="position: absolute; top: 0; right: 0; margin: 10px;">
                 Log out</a>
         </div>
 
@@ -150,7 +151,8 @@
                 <h2>Category Table</h2>
             </div>
             <div class="col-6 text-end">
-                <button type="button" class="btn btn-primary" style="position: absolute; top: 50px; right: 25px; margin: 10px;"
+                <button type="button" class="btn btn-primary"
+                        style="position: absolute; top: 50px; right: 25px; margin: 10px;"
                         data-bs-toggle="modal" data-bs-target="#addCategoryModal">
                     ADD
                 </button>
@@ -203,7 +205,8 @@
                 <h2>Products Table</h2>
             </div>
             <div class="col-6 text-end">
-                <button type="button" class="btn btn-primary" style="position: absolute; top: 50px; right: 25px; margin: 10px;"
+                <button type="button" class="btn btn-primary"
+                        style="position: absolute; top: 50px; right: 25px; margin: 10px;"
                         data-bs-toggle="modal" data-bs-target="#addProductModal">
                     ADD
                 </button>

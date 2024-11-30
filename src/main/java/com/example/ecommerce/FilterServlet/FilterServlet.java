@@ -43,8 +43,8 @@ public class FilterServlet extends HttpFilter {
             "/admin.jsp",
             "/AddProductServlet",
             "/AddCategoryServlet",
-            "/DeleteProduct",
-            "/DeleteCategory"
+            "/DeleteProductServlet",
+            "/DeleteCategoryServlet"
     ));
 
     @Override
@@ -57,11 +57,11 @@ public class FilterServlet extends HttpFilter {
             res.sendRedirect("/login.jsp");
         } else if (user.getUserRole().equals(UserRole.ADMIN)) {
             chain.doFilter(req, res);
-        }else if (user.getUserRole().equals(UserRole.USER)){
-            if(adminPages.contains(req.getRequestURI())){
+        } else if (user.getUserRole().equals(UserRole.USER)) {
+            if (adminPages.contains(req.getRequestURI())) {
                 res.sendRedirect("/login.jsp");
             }
-            chain.doFilter(req,res);
+            chain.doFilter(req, res);
         } else {
             res.sendRedirect("login.jsp");
         }

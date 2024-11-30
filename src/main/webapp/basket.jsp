@@ -55,21 +55,27 @@
                 <img src="${pageContext.request.contextPath}/file/<%=map.getKey().getId()%>" alt="Product Photo"
                      style="width: 100%; height: 100%;">
             </td>
-            <td> <%= map.getKey().getName() + " "%></td>
-            <td> <%= map.getKey().getPrice() + " "%></td>
-            <td> <%= map.getValue() + " "%></td>
+            <td><%= map.getKey().getName() + " "%>
+            </td>
+            <td><%= map.getKey().getPrice() + " "%>
+            </td>
+            <td><%= map.getValue() + " "%>
+            </td>
             <td>
                 <form action="${pageContext.request.contextPath}/PlusMinusServlet" method="get"
                       style="display: inline; ">
                     <input type="hidden" name="productId" value="<%= map.getKey().getId() %>">
                     <button class="btn" style="outline: none;
-            color: #fff; background:red" name="action" value="minus">-</button>
+            color: #fff; background:red" name="action" value="minus">-
+                    </button>
                     <input type="hidden" name="productId" value="<%= map.getKey().getId() %>">
                     <button class="btn" style="outline: none;
-            color: #fff; background : #5252b6" name="action" value="plus">+</button>
+            color: #fff; background : #5252b6" name="action" value="plus">+
+                    </button>
                 </form>
             </td>
-            <td><%= map.getKey().getPrice() * map.getValue()%></td>
+            <td><%= map.getKey().getPrice() * map.getValue()%>
+            </td>
         </tr>
         <%
             }
@@ -78,7 +84,8 @@
         <tfoot>
         <tr class="table success">
             <td colspan="5" class="text-end"><strong>Total:</strong></td>
-            <td><strong><%= totalSum %></strong></td>
+            <td><strong><%= totalSum %>
+            </strong></td>
         </tr>
         </tfoot>
     </table>
@@ -93,7 +100,7 @@
                 Back
             </button>
         </form>
-        
+
     </div>
 </div>
 

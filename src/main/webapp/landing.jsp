@@ -276,7 +276,8 @@
                 } else {
                     if (user.getUserRole().equals(UserRole.ADMIN)) {
                 %>
-                <a class="btn btn-outline-warning" href="${pageContext.request.contextPath}/admin.jsp" style="font-weight: bold;">
+                <a class="btn btn-outline-warning" href="${pageContext.request.contextPath}/admin.jsp"
+                   style="font-weight: bold;">
                     Admin
                 </a>
                 <% }%>

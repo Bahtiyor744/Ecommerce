@@ -50,7 +50,7 @@
                 int count = 0;
                 if (order.getUserId() == userId) {
                     for (OrderItem orderItem : DB.orderItem) {
-                        if (order.getId() == orderItem.getOrderID()){
+                        if (order.getId() == orderItem.getOrderID()) {
                             count += 1;
                         }
                     }

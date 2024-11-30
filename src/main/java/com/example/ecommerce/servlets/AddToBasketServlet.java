@@ -30,10 +30,10 @@ public class AddToBasketServlet extends HttpServlet {
                 session.setAttribute("basket", basket);
             } else if (action.equals("remove")) {
                 basket.getMap().remove(productAdd, 1);
-                session.setAttribute("basket",basket);
+                session.setAttribute("basket", basket);
             }
         }
-        resp.sendRedirect("landing.jsp?categoryId="+categoryId);
+        resp.sendRedirect("landing.jsp?categoryId=" + categoryId);
 
     }
 }

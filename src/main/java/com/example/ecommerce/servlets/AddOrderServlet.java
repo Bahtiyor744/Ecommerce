@@ -3,6 +3,7 @@ package com.example.ecommerce.servlets;
 import com.example.ecommerce.db.DB;
 import com.example.ecommerce.entity.*;
 import com.example.ecommerce.enums.Status;
+
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -28,7 +29,7 @@ public class AddOrderServlet extends HttpServlet {
             DB.orderItem.add(new OrderItem(order.getId(), product.getId(), amount));
         }
         basket.getMap().clear();
-        session.setAttribute("basket",basket);
+        session.setAttribute("basket", basket);
         resp.sendRedirect("/success.jsp");
     }
 }

@@ -43,7 +43,7 @@ public class PlusMinusServlet extends HttpServlet {
                 e.printStackTrace();
             }
         }
-        session.setAttribute("basket",basket);
+        session.setAttribute("basket", basket);
         resp.sendRedirect("basket.jsp");
     }
 }
